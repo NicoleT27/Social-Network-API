@@ -1,7 +1,9 @@
 require("dotenv").config();
-const express = require ("express");
+
+const express = require("express");
 const {MongoClient} = require("mongodb");
-const { connection } = require("mongoose");
+const  connection  = require("mongoose");
+const routes = require("./routes");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -10,10 +12,7 @@ const connectionStringURI = process.env.MONGOURI;
 const client = new MongoClient(connectionStringURI);
 
 
-const express = require("express");
 const db = require("./config/connection");
-const routes = require("./routes");
-
 
 
 app.use(express.urlencoded({ extended: true }));
