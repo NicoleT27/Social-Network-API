@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const { userSchema } = require("../../models/user");
+const mongoose = require("mongoose");
+
 // get all users 
 router.get("/api/users", async (req, res) => {
 
